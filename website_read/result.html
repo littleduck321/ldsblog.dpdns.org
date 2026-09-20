@@ -1,0 +1,20 @@
+
+<html>
+	<head>
+		<title>表单数据反馈结果</title>
+		<meta charset="UTF-8"></meat>
+	</head>
+	<body>
+		<p>你提交的数据是：</p>
+		<p>姓名：<span id="name"></span></p>
+		<p>最喜欢书目：<span id="sports"></span></p>
+		<script type="text/javascript">
+			var urlSearchParams = new URLSearchParams(window.location.search);
+
+			var name=urlSearchParams.get('name');
+			var sports=urlSearchParams.get('sports');
+			document.getElementById("name").innerText=name;
+			document.getElementById("sports").innerText=sports;
+		</script>
+	</body>
+</html>
